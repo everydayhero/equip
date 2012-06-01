@@ -1,8 +1,8 @@
-# Twitter Bootstrap - For Compass
+# EQUIP
 
-Compass Twitter Bootstrap is Twitter's toolkit converted for Compass.
+## Twitter Bootstrap - For Compass
 
-Demo App at https://github.com/vwall/Compass-Twitter-Bootstrap-Demo-App
+Equip is Twitter's toolkit converted for Compass.
 
 ## Usage
 
