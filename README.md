@@ -6,24 +6,25 @@ Demo App at https://github.com/vwall/Compass-Twitter-Bootstrap-Demo-App
 
 ## Usage
 
-**Install the gem**
-
-    gem install compass_twitter_bootstrap
-
 **Add it to your Gemfile**
 
-    gem 'compass_twitter_bootstrap'
+    gem 'equip', :git => 'git@github.com/everydayhero/equip.git'
 
-**Bundle install**
+**...or local install for development**
+
+    gem 'equip', :path => "~/path/to/equip"
+
+**Bundle it!**
 
     bundle install
 
 **Add it to your Compass config.rb**
 
-    require 'compass_twitter_bootstrap'
+    require 'equip'
 
 **Import it into your SCSS file**
 
+    # Legacy name while we watch for updates from parent repo...
     @import "compass_twitter_bootstrap";
 
 ## Usage with asset pipeline(Rails 3.2)
@@ -58,7 +59,7 @@ Demo App at https://github.com/vwall/Compass-Twitter-Bootstrap-Demo-App
 
 **Install plugin**
 
-    rails plugin install git://github.com/vwall/compass-twitter-bootstrap.git
+    rails plugin install git://github.com/vwall/equip.git
 
 **Add it to your config/initializers/sass.rb**
 

@@ -1,12 +1,12 @@
-require "compass_twitter_bootstrap/version"
+require "equip/version"
 
 if defined?(::Rails) && ::Rails.version >= "3.1"
-  require 'compass_twitter_bootstrap/engine'
+  require 'equip/engine'
 end
 
 require 'compass'
 Compass::Frameworks.register("twitter_bootstrap", :path => "#{File.dirname(__FILE__)}/..")
 
-module CompassTwitterBootstrap
+module Equip
   STYLESHEETS = File.expand_path("../stylesheets", __FILE__)
 end

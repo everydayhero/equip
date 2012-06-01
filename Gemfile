@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-# Specify your gem's dependencies in compass_twitter_bootstrap.gemspec
+# Specify your gem's dependencies in equip.gemspec
 gemspec
 
 gem 'rake'

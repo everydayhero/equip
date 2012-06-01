@@ -1,1 +1,1 @@
-require 'compass_twitter_bootstrap.rb'
+require 'equip.rb'
