@@ -4,11 +4,11 @@
 
 Equip is Twitter's toolkit converted for Compass.
 
-## Usage
+## Usage (without asset pipeline)
 
 **Add it to your Gemfile**
 
-    gem 'equip', :git => 'git@github.com/everydayhero/equip.git'
+    gem 'equip', :git => 'git@github.com:everydayhero/equip.git'
 
 **...or local install for development**
 
@@ -24,22 +24,14 @@ Equip is Twitter's toolkit converted for Compass.
 
 **Import it into your SCSS file**
 
-    # Legacy name while we watch for updates from parent repo...
+    # Legacy name for now...
     @import "compass_twitter_bootstrap";
 
 ## Usage with asset pipeline(Rails 3.2)
 
-**Add it to your Gemfile**
-
-    gem 'compass_twitter_bootstrap'
-
-**Use the new compass-rails gem.  See https://github.com/Compass/compass-rails for more info.**
+**As above, but add the new compass-rails gem.  See https://github.com/Compass/compass-rails for more info.**
 
     gem 'compass-rails'
-
-**Bundle install**
-
-    bundle install
 
 **Add it to your Application.rb**
         
@@ -53,28 +45,6 @@ Equip is Twitter's toolkit converted for Compass.
 **Import twitter bootstrap responsive if you're looking for that**
 
     @import "compass_twitter_bootstrap_responsive"
-
-
-## Usage with Rails 3.1 (via plugin)
-
-**Install plugin**
-
-    rails plugin install git://github.com/vwall/equip.git
-
-**Add it to your config/initializers/sass.rb**
-
-  Rails.configuration.sass.tap do |config|
-    ...
-
-    # twitter bootstrap  
-    config.load_paths << Compass::Frameworks['twitter_bootstrap'].stylesheets_directory
-
-    ...
-    end
-
-**Import it into your SCSS file**
-
-    @import "compass_twitter_bootstrap"
 
 
 ## Using [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
