@@ -26,7 +26,7 @@ Everyday Hero's opinionated implementation of Twitter's Bootstrap for Compass, v
     //= require_self
     //= require_tree .
     
-    @import "equip"
+    @import equip
 
 ## Usage with asset pipeline(Rails 3.2)
 
@@ -50,6 +50,12 @@ Everyday Hero's opinionated implementation of Twitter's Bootstrap for Compass, v
 
     require 'equip'
     project_type = :rails
+
+## On Heroku
+
+If you're deploying to Heroku, you'll need to prevent Rails from initialising when precompiling assets at deploy time. In your `application.rb`:
+
+    config.assets.initialize_on_precompile = false
 
 ## Reference [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 
