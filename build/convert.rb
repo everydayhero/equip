@@ -5,7 +5,8 @@ class Convert
 
   def process
     get_less_files.each do |name|
-      unless ['bootstrap.less', 'responsive.less'].include?(name)
+      unless ['bootstrap.less', 'responsive.less', 'tests'].include?(name)
+        puts "Opening #{name}... "
         file = open_git_file("https://raw.github.com/twitter/bootstrap/master/less/#{name}")
         file = convert(file) 
 
@@ -21,7 +22,7 @@ class Convert
       end
     end
 
-    self.create_sass_files
+    # self.create_sass_files
   end
   
   def create_sass_files

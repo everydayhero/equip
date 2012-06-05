@@ -8,5 +8,5 @@ require 'compass'
 Compass::Frameworks.register("twitter_bootstrap", :path => "#{File.dirname(__FILE__)}/..")
 
 module Equip
-  STYLESHEETS = File.expand_path("../stylesheets_sass", __FILE__)
+  STYLESHEETS = File.expand_path("../stylesheets", __FILE__)
 end

@@ -38,20 +38,19 @@ Equip is Twitter's toolkit converted for Compass.
     # Enable the asset pipeline
     config.assets.enabled = true
 
-**Import it into your SCSS file**
+**Import it into your SASS file**
 
-    @import "compass_twitter_bootstrap"
+    @import equip
 
-**Import twitter bootstrap responsive if you're looking for that**
+**Create `config/compass.rb` with the following:**
 
-    @import "compass_twitter_bootstrap_responsive"
+    require 'equip'
 
+    project_type = :rails
 
-## Using [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+## Reference [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 
-To use the font awesome font and icons simply change the standard import to:
-
-    @import "compass_twitter_bootstrap_awesome"
+Font Awesome is used for scalable fonts, for now.
 
 ## Using Javascripts with Rails Asset Pipeline
 
@@ -62,7 +61,6 @@ Include them individually or
     //=require bootstrap-all
 
 to include all files
-
 
 ## TWITTER BOOTSTRAP
 

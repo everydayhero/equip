@@ -1,0 +1,29 @@
+// EDH Buttons
+
+=button
+  @extend .btn
+  font:
+    size: $baseFontSize - 2px
+    weight: bold
+  +border-radius(2px)
+  padding:
+    left: 12px
+    right: 12px
+
+=button-big
+  +button
+  @extend .btn-large
+  font:
+    size: $baseFontSize - 1px
+    weight: bold
+  padding:
+    left: 16px
+    right: 16px
+  +border-radius(3px)
+
+=button-mini
+  +button
+  @extend .btn-mini
+  font:
+    size: $baseFontSize - 3px
+    weight: bold
