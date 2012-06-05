@@ -1,8 +1,6 @@
 # EQUIP
 
-## Twitter Bootstrap - For Compass
-
-Equip is Twitter's toolkit converted for Compass.
+Everyday Hero's opinionated implementation of Twitter's Bootstrap for Compass, via the [Compass Twitter Bootstrap](https://github.com/vwall/compass-twitter-bootstrap) gem.
 
 ## Usage (without asset pipeline)
 
@@ -21,11 +19,14 @@ Equip is Twitter's toolkit converted for Compass.
 **Add it to your Compass config.rb**
 
     require 'equip'
+    project_type = :rails
 
-**Import it into your SCSS file**
+**Import it into your SASS file**
 
-    # Legacy name for now...
-    @import "compass_twitter_bootstrap";
+    //= require_self
+    //= require_tree .
+    
+    @import "equip";
 
 ## Usage with asset pipeline(Rails 3.2)
 
@@ -40,12 +41,14 @@ Equip is Twitter's toolkit converted for Compass.
 
 **Import it into your SASS file**
 
+    //= require_self
+    //= require_tree .
+    
     @import equip
 
 **Create `config/compass.rb` with the following:**
 
     require 'equip'
-
     project_type = :rails
 
 ## Reference [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
