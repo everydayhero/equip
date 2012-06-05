@@ -26,7 +26,7 @@ Everyday Hero's opinionated implementation of Twitter's Bootstrap for Compass, v
     //= require_self
     //= require_tree .
     
-    @import "equip";
+    @import "equip"
 
 ## Usage with asset pipeline(Rails 3.2)
 
