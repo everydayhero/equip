@@ -2,9 +2,9 @@
 
 Everyday Hero's opinionated implementation of Twitter's Bootstrap for Compass, via the [Compass Twitter Bootstrap](https://github.com/vwall/compass-twitter-bootstrap) gem.
 
-## Usage (without asset pipeline)
+## Usage without Asset Pipeline
 
-**Add it to your Gemfile**
+**Add this to your Gemfile**
 
     gem 'equip', :git => 'git@github.com:everydayhero/equip.git'
 
@@ -16,7 +16,7 @@ Everyday Hero's opinionated implementation of Twitter's Bootstrap for Compass, v
 
     bundle install
 
-**Add it to your Compass config.rb**
+**Add this to your Compass config.rb**
 
     require 'equip'
     project_type = :rails
@@ -24,32 +24,43 @@ Everyday Hero's opinionated implementation of Twitter's Bootstrap for Compass, v
 **Import it into your SASS file**
 
     //= require_self
+    // Optional...
     //= require_tree .
     
     @import equip
 
-## Usage with asset pipeline(Rails 3.2)
+## Usage with Asset Pipeline
 
-**As above, but add the new compass-rails gem.  See https://github.com/Compass/compass-rails for more info.**
+**Add this to your Gemfile.**
 
     gem 'compass-rails'
+    gem 'equip', :git => 'git@github.com:everydayhero/equip.git'
 
-**Add it to your Application.rb**
+**...or local install for development**
+
+    gem 'equip', :path => "~/path/to/equip"
+
+**Bundle it!**
+
+    bundle install
+
+**Add it to your config/application.rb**
         
     # Enable the asset pipeline
     config.assets.enabled = true
-
-**Import it into your SASS file**
-
-    //= require_self
-    //= require_tree .
-    
-    @import equip
 
 **Create `config/compass.rb` with the following:**
 
     require 'equip'
     project_type = :rails
+
+**Import it into your SASS file**
+
+    //= require_self
+    // Optional...
+    //= require_tree .
+    
+    @import equip
 
 ## On Heroku
 
