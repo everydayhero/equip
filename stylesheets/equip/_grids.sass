@@ -1,4 +1,6 @@
+@include bootstrap-grid-fluid($fluidGridColumnWidth, $fluidGridGutterWidth)
+
 =col($cols)
-  @extend .span#{$cols}
+  +bootstrap-grid-core-span($cols, $gridColumnWidth, $gridGutterWidth)
   float: left
   margin-left: $gridGutterWidth
