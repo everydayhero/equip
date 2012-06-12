@@ -1,11 +1,8 @@
-require "equip/version"
-
-if defined?(::Rails) && ::Rails.version >= "3.1"
-  require 'equip/engine'
-end
-
+require 'equip/version'
+require 'equip/engine'
 require 'compass'
-Compass::Frameworks.register("twitter_bootstrap", :path => "#{File.dirname(__FILE__)}/..")
+
+Compass::Frameworks.register("equip", :path => "#{File.expand_path(File.join(File.dirname(__FILE__), ".."))}")
 
 module Equip
   STYLESHEETS = File.expand_path("../stylesheets", __FILE__)
