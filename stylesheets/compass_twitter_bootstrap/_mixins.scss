@@ -197,6 +197,9 @@
 
 // Drop shadows
 @mixin bootstrap-box-shadow($shadow) {
+  @if type-of($shadow) == string {
+    $shadow: unquote($shadow);
+  }
   -webkit-box-shadow: $shadow;
      -moz-box-shadow: $shadow;
           box-shadow: $shadow;

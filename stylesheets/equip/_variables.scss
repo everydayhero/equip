@@ -41,7 +41,7 @@ $monoFontFamily: Menlo, Monaco, Consolas, "Courier New", monospace !default;
 
 $baseFontSize: 13px !default;
 $baseFontFamily: $sansFontFamily !default;
-$baseLineHeight: 18px !default;
+$baseLineHeight: 17px !default;
 $altFontFamily: $serifFontFamily !default;
 
 // empty to use BS default, $baseFontFamily
@@ -73,14 +73,14 @@ $btnBackground: $white !default;
 $btnBackgroundHighlight: darken($white, 10%) !default;
 $btnBorder: #cccccc !default;
 
-$btnPrimaryBackground: $linkColor !default;
+$btnPrimaryBackground: $blue !default;
 $btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 15%) !default;
 
 $btnInfoBackground: #5bc0de !default;
-$btnInfoBackgroundHighlight: #2f96b4 !default;
+$btnInfoBackgroundHighlight: adjust-hue($btnInfoBackground, 15%) !default;
 
 $btnSuccessBackground: #62c462 !default;
-$btnSuccessBackgroundHighlight: #51a351 !default;
+$btnSuccessBackgroundHighlight: darken($btnSuccessBackground, 15%) !default;
 
 $btnWarningBackground: lighten($orange, 15%) !default;
 $btnWarningBackgroundHighlight: $orange !default;
@@ -88,16 +88,16 @@ $btnWarningBackgroundHighlight: $orange !default;
 $btnDangerBackground: #ee5f5b !default;
 $btnDangerBackgroundHighlight: #bd362f !default;
 
-$btnInverseBackground: $gray !default;
+$btnInverseBackground: $grayDark !default;
 $btnInverseBackgroundHighlight: $grayDarker !default;
 
 // Forms
 // -------------------------
 $inputBackground: $white !default;
 $inputBorder: #cccccc !default;
-$inputBorderRadius: 3px !default;
+$inputBorderRadius: 2px !default;
 $inputDisabledBackground: $grayLighter !default;
-$formActionsBackground: #f5f5f5 !default;
+$formActionsBackground: #f8f8f8 !default;
 
 // Dropdowns
 // -------------------------
@@ -123,8 +123,8 @@ $zindexModal: 1050 !default;
 
 // Sprite icons path
 // -------------------------
-$iconSpritePath: "../img/glyphicons-halflings.png" !default;
-$iconWhiteSpritePath: "../img/glyphicons-halflings-white.png" !default;
+$iconSpritePath: image-url("glyphicons-halflings.png") !default;
+$iconWhiteSpritePath: image-url("glyphicons-halflings-white.png") !default;
 
 // Input placeholder text color
 // -------------------------
@@ -136,26 +136,26 @@ $hrBorder: $grayLighter !default;
 
 // Navbar
 // -------------------------
-$navbarHeight: 40px !default;
-$navbarBackground: $grayDarker !default;
-$navbarBackgroundHighlight: $grayDark !default;
+$navbarHeight: 45px !default;
+$navbarBackground: darken($blue, 10%) !default;
+$navbarBackgroundHighlight: $blue !default;
 
 $navbarText: $grayLight !default;
-$navbarLinkColor: $grayLight !default;
+$navbarLinkColor: lighten($blue, 50%) !default;
 $navbarLinkColorHover: $white !default;
 $navbarLinkColorActive: $navbarLinkColorHover !default;
 $navbarLinkBackgroundHover: transparent !default;
 $navbarLinkBackgroundActive: $navbarBackground !default;
 
-$navbarSearchBackground: lighten($navbarBackground, 25%) !default;
+$navbarSearchBackground: darken($navbarBackground, 10%) !default;
 $navbarSearchBackgroundFocus: $white !default;
-$navbarSearchBorder: darken($navbarSearchBackground, 30%) !default;
+$navbarSearchBorder: $navbarSearchBackground !default;
 $navbarSearchPlaceholderColor: #cccccc !default;
 $navbarBrandColor: $navbarLinkColor !default;
 
 // Hero unit
 // -------------------------
-$heroUnitBackground: $grayLighter !default;
+$heroUnitBackground: lighten($blue, 53%) !default;
 $heroUnitHeadingColor: inherit !default;
 $heroUnitLeadColor: inherit !default;
 
