@@ -19,4 +19,5 @@ use Rack::ShowStatus
 use Rack::ShowExceptions
 use Sass::Plugin::Rack
 use Rack::Static, :index => 'index.html', :root => 'public'
+use Rack::Static, :urls => ['/images', '/fonts', '/javascripts'], :root => 'vendor/assets'
 run Rack::File.new(File.join(ROOT_DIR, 'public'))
