@@ -1,0 +1,27 @@
+// EDH Buttons
+
+.btn {
+  @extend .btn;
+  font: {
+    size: $baseFontSize - 2px;
+    weight: bold; };
+  @include border-radius(2px);
+  padding: {
+    left: 12px;
+    right: 12px; }; }
+
+.btn-large {
+  @extend .btn-large;
+  font: {
+    size: $baseFontSize - 1px;
+    weight: bold; };
+  padding: {
+    left: 16px;
+    right: 16px; };
+  @include border-radius(3px); }
+
+.btn-mini {
+  @extend .btn-mini;
+  font: {
+    size: $baseFontSize - 3px;
+    weight: bold; }; }
