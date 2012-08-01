@@ -1,4 +1,4 @@
 module Equip
   class Engine < ::Rails::Engine
-  end
+  end if defined? ::Rails::Engine
 end
