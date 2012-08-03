@@ -1,0 +1,37 @@
+// Don't make the page scrollable
+.modal-open {
+	overflow: hidden;
+}
+
+// We have to override the default behavior if we want flexbox to work
+.modal.in {
+	display: block !important; // fallback if browser doesn't support flexbox
+	display: -webkit-box !important;
+	display: -moz-box !important;
+	display: -ms-box !important;
+	display: -o-box !important;
+	display: box !important;
+
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-ms-box-orient: vertical;
+	-o-box-orient: vertical;
+	box-orient: vertical;
+}
+
+.modal-body {
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	-ms-box-flex: 1;
+	-o-box-flex: 1;
+	box-flex: 1;
+}
+
+@media (max-height: 553px) {
+	.modal {
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+	}
+}
