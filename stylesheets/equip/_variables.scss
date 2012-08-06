@@ -72,6 +72,7 @@ $tableBorder: #dddddd !default;
 $btnBackground: $white !default;
 $btnBackgroundHighlight: darken($white, 10%) !default;
 $btnBorder: #cccccc !default;
+$btnBorderRadius: 0 !default;
 
 $btnPrimaryBackground: $blue !default;
 $btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 15%) !default;
@@ -136,12 +137,12 @@ $hrBorder: $grayLighter !default;
 
 // Navbar
 // -------------------------
-$navbarHeight: 45px !default;
-$navbarBackground: darken($blue, 10%) !default;
-$navbarBackgroundHighlight: $blue !default;
+$navbarHeight: 50px !default;
+$navbarBackground: $grayDark !default;
+$navbarBackgroundHighlight: $grayDarker !default;
 
 $navbarText: $grayLight !default;
-$navbarLinkColor: lighten($blue, 50%) !default;
+$navbarLinkColor: $grayLighter !default;
 $navbarLinkColorHover: $white !default;
 $navbarLinkColorActive: $navbarLinkColorHover !default;
 $navbarLinkBackgroundHover: transparent !default;
@@ -149,13 +150,13 @@ $navbarLinkBackgroundActive: $navbarBackground !default;
 
 $navbarSearchBackground: darken($navbarBackground, 10%) !default;
 $navbarSearchBackgroundFocus: $white !default;
-$navbarSearchBorder: $navbarSearchBackground !default;
-$navbarSearchPlaceholderColor: #cccccc !default;
+$navbarSearchBorder: $navbarBackgroundHighlight !default;
+$navbarSearchPlaceholderColor: $grayLight !default;
 $navbarBrandColor: $navbarLinkColor !default;
 
 // Hero unit
 // -------------------------
-$heroUnitBackground: lighten($blue, 53%) !default;
+$heroUnitBackground: $grayLighter !default;
 $heroUnitHeadingColor: inherit !default;
 $heroUnitLeadColor: inherit !default;
 
