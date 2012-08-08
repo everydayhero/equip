@@ -27,10 +27,23 @@
 	box-flex: 1;
 }
 
+@media (max-width: 560px) {
+	.modal {
+		@include bootstrap-border-radius(0);
+		left: 0;
+		margin: 0;
+		right: 0;
+		top: 0;
+		width: auto;
+	}
+}
+
 @media (max-height: 553px) {
 	.modal {
+		@include bootstrap-border-radius(0);
 		bottom: 0;
 		left: 0;
+		margin: 0;
 		right: 0;
 		top: 0;
 	}
