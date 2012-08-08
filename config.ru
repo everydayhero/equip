@@ -9,8 +9,8 @@ Compass.add_project_configuration Compass::Configuration::Data.new('equip', {
 	:http_path => '/',
 	:css_dir => './public/stylesheets',
 	:sass_dir => './public/stylesheets',
-	:images_dir => 'images',
-	:javascripts_dir => 'javascripts',
+	:images_dir => './vendor/assets/images',
+	:javascripts_dir => './vendor/assets/javascripts',
 	:relative_assets => false
 })
 Compass.configure_sass_plugin!
