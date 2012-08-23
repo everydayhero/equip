@@ -1,12 +1,6 @@
-@import "compass";
-
 @import "equip/variables";
 
-@import "compass_twitter_bootstrap_awesome";
-@import "compass_twitter_bootstrap_responsive";
+@import "bootstrap";
 
 // Equip Overrides & Implementations of Bootstrap Defaults
-@import "equip/buttons";
-@import "equip/button-groups";
-@import "equip/grids";
 @import "equip/modals";

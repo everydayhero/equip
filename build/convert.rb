@@ -83,7 +83,7 @@ private
 
   def save_file(name, content)
     name = name.gsub(/\.less/, '')
-    f = File.open("stylesheets/compass_twitter_bootstrap/_#{name}.scss", "w+")
+    f = File.open("stylesheets/bootstrap/_#{name}.scss", "w+")
     f.write(content)
     f.close
     puts "Converted #{name}\n"

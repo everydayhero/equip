@@ -2,8 +2,8 @@
 require File.expand_path('../lib/equip/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Elliot Schoemaker"]
-  gem.email         = ["evschoemaker@gmail.com"]
+  gem.authors       = ["Elliot Schoemaker", "Marty Zalega"]
+  gem.email         = ["evschoemaker@gmail.com", "evilmarty@gmail.com"]
   gem.description   = %q{Compass/SCSS version of the twitter bootstrap forked to Everyday Hero Bootstrap - Equip}
   gem.summary       = %q{Compass Twitter Bootstrap}
   
