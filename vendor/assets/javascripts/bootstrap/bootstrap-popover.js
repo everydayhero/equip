@@ -1,4 +1,4 @@
-//= require bootstrap-tooltip
+//= require ./bootstrap-tooltip
 /* ===========================================================
  * bootstrap-popover.js v2.0.3
  * http://twitter.github.com/bootstrap/javascript.html#popovers
