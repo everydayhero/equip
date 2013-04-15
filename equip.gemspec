@@ -2,19 +2,17 @@
 require File.expand_path('../lib/equip/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Elliot Schoemaker", "Marty Zalega"]
-  gem.email         = ["evschoemaker@gmail.com", "evilmarty@gmail.com"]
-  gem.description   = %q{Compass/SCSS version of the twitter bootstrap forked to Everyday Hero Bootstrap - Equip}
-  gem.summary       = %q{Compass Twitter Bootstrap}
-  
+  gem.authors       = ["Tim Cooper"]
+  gem.email         = ["coop@latrobest.com"]
+  gem.description   = %q{Everyday Hero Framework}
+  gem.summary       = %q{Everyday Hero Framework}
+
   gem.homepage      = "https://github.com/everydayhero/equip"
 
-  gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
-  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "equip"
   gem.require_paths = ["lib"]
   gem.version       = Equip::VERSION
 
-  gem.add_runtime_dependency "compass"
+  gem.add_dependency "rails", "~> 3.2.10"
 end
