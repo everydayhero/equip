@@ -1,118 +1,46 @@
-# EQUIP
+# Equip
 
-Everyday Hero's opinionated implementation of Twitter's Bootstrap for Compass, via the [Compass Twitter Bootstrap](https://github.com/vwall/compass-twitter-bootstrap) gem.
+Everyday Hero Stylesheet and Javascript Framework.
 
-## Usage without Asset Pipeline
+This gem originally began life as a Twitter customisation but has since
+grown its own legs. For backwards compatability development will occur
+in a separate branch until it is ready for prime time.
 
-**Add this to your Gemfile**
+## Development
 
-    gem 'equip', :git => 'git@github.com:everydayhero/equip.git'
+Rails is fairly opinioned on where files should live. We are free to
+break those opinions but they are pretty good.
 
-**...or local install for development**
+> app/assets is for assets that are owned by the application, such as
+> custom images, JavaScript files or stylesheets.
+>
+> lib/assets is for your own libraries’ code that doesn’t really fit
+> into the scope of the application or those libraries which are shared
+> across applications.
+>
+> vendor/assets is for assets that are owned by outside entities, such
+> as code for JavaScript plugins and CSS frameworks.
 
-    gem 'equip', :path => "~/path/to/equip"
+Because we are building a framework to be used by all EDH applications I
+believe most of our code will live in `lib`. Anything that we depend on
+like `normalize.css` will live in `vendor`.
 
-**Bundle it!**
+## Installation
 
-    bundle install
+Include in your gemfile:
 
-**Add this to your Compass config.rb**
+``` ruby
+gem 'equip', github: 'everydayhero/equip', branch: 'tc_4_jb'
+```
 
-    require 'equip'
-    project_type = :rails
+Locally you can test how this works by including the local version
+instead of the version on GitHub.
 
-**Import it into your SASS file**
+``` ruby
+gem 'equip', path: '~/path/to/equip'
+```
 
-    //= require_self
-    // Optional...
-    //= require_tree .
-    
-    @import equip
+## Todo
 
-## Usage with Asset Pipeline
-
-**Add this to your Gemfile.**
-
-    gem 'compass-rails'
-    gem 'equip', :git => 'git@github.com:everydayhero/equip.git'
-
-**...or local install for development**
-
-    gem 'equip', :path => "~/path/to/equip"
-
-**Bundle it!**
-
-    bundle install
-
-**Add it to your config/application.rb**
-        
-    # Enable the asset pipeline
-    config.assets.enabled = true
-
-**Create `config/compass.rb` with the following:**
-
-    require 'equip'
-    project_type = :rails
-
-**Import it into your SASS file**
-
-    //= require_self
-    // Optional...
-    //= require_tree .
-    
-    @import equip
-
-## On Heroku
-
-If you're deploying to Heroku, you'll need to prevent Rails from initialising when precompiling assets at deploy time. In your `application.rb`:
-
-    config.assets.initialize_on_precompile = false
-
-## Reference [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
-
-Font Awesome is used for scalable fonts, for now.
-
-## Using Javascripts with Rails Asset Pipeline
-
-Javascript Libraries are located in vendor/assets/javascripts
-
-Include them individually or 
-
-    //=require bootstrap-all
-
-to include all files
-
-## TWITTER BOOTSTRAP
-
-Bootstrap is Twitter's toolkit for kickstarting CSS for websites, apps, and more. It includes base CSS styles for typography, forms, buttons, tables, grids, navigation, alerts, and more.
-
-To get started -- checkout http://twitter.github.com/bootstrap!
-
-## AUTHORS
-
-**Mark Otto**
-
-+ http://twitter.com/mdo
-+ http://github.com/markdotto
-
-**Jacob Thornton**
-
-+ http://twitter.com/fat
-+ http://github.com/fat
-
-
-##Copyright and License
-
-Copyright 2011 Twitter, Inc.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this work except in compliance with the License.
-You may obtain a copy of the License in the LICENSE file, or at:
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+[ ] Create rake task to precompile all assets on a release
+[ ] Create mini-website that links to latest precompiled assets
