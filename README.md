@@ -40,7 +40,31 @@ instead of the version on GitHub.
 gem 'equip', path: '~/path/to/equip'
 ```
 
+## Usage
+
+By inheriting from `Rails::Engine` all files in `lib/assets` and
+`vendor/assets` have been added to the asset pipeline (for free). This
+means you can reference any of the files located in this gem as if they
+were in your own project. This does present a problem that if two files
+are named the same the first one found in the load path
+(`Rails.application.config.assets.paths`) will be used.
+
+``` sass
+// application.css.sass in app/assets/stylesheets/application.css
+//= require equip
+```
+
+There is a Rakefile that can be used to precompile all the assets to be
+used on a demo page:
+
+``` sh
+$ rake assets
+```
+
+By default it will create the assets in `public/assets` which has been
+git ignored.
+
 ## Todo
 
-[ ] Create rake task to precompile all assets on a release
+[x] Create rake task to precompile all assets on a release
 [ ] Create mini-website that links to latest precompiled assets
